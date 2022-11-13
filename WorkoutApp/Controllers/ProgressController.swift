@@ -12,11 +12,11 @@ class ProgressController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Workout Progress"
+        title = Resources.Strings.NavBar.progress
         navigationController?.tabBarItem.title = Resources.Strings.TabBar.progress
         
-        addNavBarButton(atPosition: .left, withTitle: "Export")
-        addNavBarButton(atPosition: .right, withTitle: "Details")
+        addNavBarButton(atPosition: .left, withTitle: Resources.Strings.Progress.navBarLeft)
+        addNavBarButton(atPosition: .right, withTitle: Resources.Strings.Progress.navBarRight)
     }
     
     override func leftBarButtonItemAction() {

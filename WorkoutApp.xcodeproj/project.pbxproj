@@ -19,6 +19,7 @@
 		1096D5FC2920F0030084CD14 /* ProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096D5FB2920F0030084CD14 /* ProgressController.swift */; };
 		1096D5FE2920F00D0084CD14 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096D5FD2920F00D0084CD14 /* SettingsController.swift */; };
 		1096D6002920FD3F0084CD14 /* OverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096D5FF2920FD3F0084CD14 /* OverviewController.swift */; };
+		1096D604292103350084CD14 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096D603292103350084CD14 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1096D5FB2920F0030084CD14 /* ProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressController.swift; sourceTree = "<group>"; };
 		1096D5FD2920F00D0084CD14 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		1096D5FF2920FD3F0084CD14 /* OverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewController.swift; sourceTree = "<group>"; };
+		1096D603292103350084CD14 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		1096D5CE2920D7F70084CD14 /* WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				1096D601292103120084CD14 /* Components */,
 				1096D5F12920EB880084CD14 /* Controllers */,
 				1096D5E82920DADB0084CD14 /* Helpers */,
 				1096D5E52920D85C0084CD14 /* SupportingFiles */,
@@ -123,6 +126,22 @@
 				1096D5D32920D7F70084CD14 /* BaseController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		1096D601292103120084CD14 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1096D6022921031A0084CD14 /* Overview */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1096D6022921031A0084CD14 /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				1096D603292103350084CD14 /* CustomButton.swift */,
+			);
+			path = Overview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +221,7 @@
 				1096D5D02920D7F70084CD14 /* AppDelegate.swift in Sources */,
 				1096D5FC2920F0030084CD14 /* ProgressController.swift in Sources */,
 				1096D5FE2920F00D0084CD14 /* SettingsController.swift in Sources */,
+				1096D604292103350084CD14 /* CustomButton.swift in Sources */,
 				1096D5EE2920DD3F0084CD14 /* Resources.swift in Sources */,
 				1096D6002920FD3F0084CD14 /* OverviewController.swift in Sources */,
 				1096D5EA2920DAE40084CD14 /* Extensions.swift in Sources */,
