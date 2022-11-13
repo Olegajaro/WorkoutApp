@@ -12,6 +12,15 @@ enum Resources {
         static let active = UIColor(hex: 0x437BFE)
         static let inactive = UIColor(hex: 0x929DA5)
         static let separator = UIColor(hex: 0xE8ECEF)
+        
+        static let background = UIColor(hex: 0xF8F9F9)
+        static let appTextGrayColor = UIColor(hex: 0x545C77)
+    }
+    
+    enum Fonts {
+        static func helveticaRegular(withSize size: CGFloat) -> UIFont {
+            UIFont(name: "Helvetica", size: size) ?? UIFont.systemFont(ofSize: size)
+        }
     }
     
     enum Strings {
