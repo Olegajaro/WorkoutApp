@@ -32,8 +32,8 @@ final class CustomButton: UIButton {
 private extension CustomButton {
     
     func addViews() {
-        addSubview(title)
-        addSubview(iconImageView)
+        addView(title)
+        addView(iconImageView)
     }
     
     func layoutViews() {
@@ -56,12 +56,10 @@ private extension CustomButton {
         layer.cornerRadius = 14
         makeSystem(self)
         
-        title.translatesAutoresizingMaskIntoConstraints = false
         title.textAlignment = .center
         title.textColor = Resources.Colors.active
         title.font = Resources.Fonts.helveticaRegular(withSize: 15)
         
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.image = Resources.Images.Common.downArrow?.withRenderingMode(.alwaysTemplate)
         iconImageView.tintColor = Resources.Colors.active
     }
