@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		109103972928E02D00B522CC /* OverviewNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109103962928E02D00B522CC /* OverviewNavBar.swift */; };
+		1091039A2928E08000B522CC /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109103992928E08000B522CC /* BaseView.swift */; };
+		1091039E2928F37E00B522CC /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1091039D2928F37E00B522CC /* WeekView.swift */; };
+		109103A02928F4E200B522CC /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1091039F2928F4E200B522CC /* WeekdayView.swift */; };
 		1096D5D02920D7F70084CD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096D5CF2920D7F70084CD14 /* AppDelegate.swift */; };
 		1096D5D42920D7F70084CD14 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1096D5D32920D7F70084CD14 /* BaseController.swift */; };
 		1096D5D92920D7FA0084CD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1096D5D82920D7FA0084CD14 /* Assets.xcassets */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		109103962928E02D00B522CC /* OverviewNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavBar.swift; sourceTree = "<group>"; };
+		109103992928E08000B522CC /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		1091039D2928F37E00B522CC /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		1091039F2928F4E200B522CC /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
 		1096D5CC2920D7F70084CD14 /* WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1096D5CF2920D7F70084CD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1096D5D32920D7F70084CD14 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -51,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		109103982928E07300B522CC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				109103992928E08000B522CC /* BaseView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1091039C2928F37500B522CC /* WeekView */ = {
+			isa = PBXGroup;
+			children = (
+				1091039D2928F37E00B522CC /* WeekView.swift */,
+				1091039F2928F4E200B522CC /* WeekdayView.swift */,
+			);
+			path = WeekView;
+			sourceTree = "<group>";
+		};
 		1096D5C32920D7F70084CD14 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +156,7 @@
 		1096D601292103120084CD14 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				109103982928E07300B522CC /* Core */,
 				1096D6022921031A0084CD14 /* Overview */,
 			);
 			path = Components;
@@ -139,7 +165,9 @@
 		1096D6022921031A0084CD14 /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				1091039C2928F37500B522CC /* WeekView */,
 				1096D603292103350084CD14 /* CustomButton.swift */,
+				109103962928E02D00B522CC /* OverviewNavBar.swift */,
 			);
 			path = Overview;
 			sourceTree = "<group>";
@@ -215,13 +243,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1096D5E72920DA320084CD14 /* TabBarController.swift in Sources */,
+				1091039A2928E08000B522CC /* BaseView.swift in Sources */,
 				1096D5F02920E74E0084CD14 /* NavBarController.swift in Sources */,
 				1096D5FA2920EFF90084CD14 /* SessionController.swift in Sources */,
 				1096D5D42920D7F70084CD14 /* BaseController.swift in Sources */,
 				1096D5D02920D7F70084CD14 /* AppDelegate.swift in Sources */,
+				109103A02928F4E200B522CC /* WeekdayView.swift in Sources */,
 				1096D5FC2920F0030084CD14 /* ProgressController.swift in Sources */,
 				1096D5FE2920F00D0084CD14 /* SettingsController.swift in Sources */,
 				1096D604292103350084CD14 /* CustomButton.swift in Sources */,
+				109103972928E02D00B522CC /* OverviewNavBar.swift in Sources */,
+				1091039E2928F37E00B522CC /* WeekView.swift in Sources */,
 				1096D5EE2920DD3F0084CD14 /* Resources.swift in Sources */,
 				1096D6002920FD3F0084CD14 /* OverviewController.swift in Sources */,
 				1096D5EA2920DAE40084CD14 /* Extensions.swift in Sources */,

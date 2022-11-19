@@ -8,6 +8,7 @@
 import UIKit
 
 enum Resources {
+    // MARK: - Colors
     enum Colors {
         static let active = UIColor(hex: 0x437BFE)
         static let inactive = UIColor(hex: 0x929DA5)
@@ -19,12 +20,14 @@ enum Resources {
         static let customButtonColor = UIColor(hex: 0xF0F3FF)
     }
     
+    // MARK: - Fonts
     enum Fonts {
         static func helveticaRegular(withSize size: CGFloat) -> UIFont {
             UIFont(name: "Helvetica", size: size) ?? UIFont.systemFont(ofSize: size)
         }
     }
     
+    // MARK: - Strings
     enum Strings {
         enum TabBar {
             static let overview = "Overview"
@@ -34,7 +37,8 @@ enum Resources {
         }
         
         enum NavBar {
-            static let overview = "High Intensity Cardio"
+            static let overview = "Today"
+            static let session = "High Intensity Cardio"
             static let progress = "Workout Progress"
             static let settings = "Settings"
         }
@@ -54,6 +58,7 @@ enum Resources {
         }
     }
     
+    // MARK: - Images
     enum Images {
         enum TabBar {
             static let overview = UIImage(named: "overview_tab")
@@ -64,6 +69,7 @@ enum Resources {
         
         enum Common {
             static let downArrow = UIImage(named: "down_arrow")
+            static let add = UIImage(named: "add_button")
         }
     }
 }

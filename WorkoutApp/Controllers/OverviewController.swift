@@ -9,7 +9,8 @@ import UIKit
 
 class OverviewController: BaseController {
     
-    private let customButton = CustomButton()
+    private let topView = UIView()
+    private let navBar = OverviewNavBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,34 +23,34 @@ extension OverviewController {
     override func addViews() {
         super.addViews()
         
-        view.addSubview(customButton)
+        view.addView(topView)
+        view.addView(navBar)
     }
     
     override func layoutViews() {
         super.layoutViews()
         
         NSLayoutConstraint.activate([
-            customButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            customButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            customButton.heightAnchor.constraint(equalToConstant: 28),
-            customButton.widthAnchor.constraint(equalToConstant: 130)
+            topView.topAnchor.constraint(equalTo: view.topAnchor),
+            topView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topView.heightAnchor.constraint(equalToConstant: 100)
+        ])
+        
+        NSLayoutConstraint.activate([
+            navBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
     
     override func configure() {
         super.configure()
         
-        customButton.translatesAutoresizingMaskIntoConstraints = false
-        customButton.setTitle(Resources.Strings.Overview.customButtonTitle)
-        customButton.addTarget(self, action: #selector(customButtonAction), for: .touchUpInside)
+        navigationController?.navigationBar.isHidden = true
+        
+        topView.backgroundColor = .white
     }
     
 }
 
-@objc extension OverviewController {
-    
-    func customButtonAction() {
-        print("DEBUG: custom button tapped")
-    }
-    
-}
