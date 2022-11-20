@@ -50,7 +50,20 @@ extension OverviewController {
         navigationController?.navigationBar.isHidden = true
         
         topView.backgroundColor = .white
+        navBar.addCustomButtonAction(#selector(customButtonAction), with: self)
+        navBar.addAdditingAction(#selector(addAction), with: self)
     }
     
 }
 
+private extension OverviewController {
+    @objc
+    func customButtonAction() {
+        print("DEBUG: custom button tapped")
+    }
+    
+    @objc
+    func addAction() {
+        print("DEBUG: add button tapped")
+    }
+}

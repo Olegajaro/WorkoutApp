@@ -21,12 +21,12 @@ final class OverviewNavBar: BaseView {
         addBottomBorder(withColor: Resources.Colors.separator, height: 1)
     }
 
-    func addCustomButtonAction(_ action: Selector, with targer: Any) {
-        customButton.addTarget(targer, action: action, for: .touchUpInside)
+    func addCustomButtonAction(_ action: Selector, with target: Any) {
+        customButton.addTarget(target, action: action, for: .touchUpInside)
     }
     
-    func addAdditingAction(_ action: Selector, with targer: Any) {
-        addButton.addTarget(self, action: action, for: .touchUpInside)
+    func addAdditingAction(_ action: Selector, with target: Any) {
+        addButton.addTarget(target, action: action, for: .touchUpInside)
     }
 }
 
