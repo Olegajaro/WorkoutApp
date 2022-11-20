@@ -11,7 +11,7 @@ import UIKit
 class SessionController: BaseController {
     
     private let timerView: BaseInfoView = {
-        let view = BaseInfoView(with: "Test", alignment: .center)
+        let view = BaseInfoView(withTitle: "Test", buttonTitle: "Test button")
         return view
     }()
     
@@ -43,6 +43,7 @@ extension SessionController {
         
         addNavBarButton(atPosition: .left, withTitle: Resources.Strings.Session.navBarLeft)
         addNavBarButton(atPosition: .right, withTitle: Resources.Strings.Session.navBarRight)
+        timerView.addButtonAction(#selector(buttonAction), with: self)
     }
     
     override func leftBarButtonItemAction() {
@@ -51,5 +52,10 @@ extension SessionController {
     
     override func rightBarButtonItemAction() {
         print("DEBUG: session nav bar right button tapped")
+    }
+    
+    @objc
+    func buttonAction() {
+        print("DEBUG: tap button")
     }
 }
