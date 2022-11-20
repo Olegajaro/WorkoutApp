@@ -30,10 +30,18 @@ enum Resources {
     // MARK: - Strings
     enum Strings {
         enum TabBar {
-            static let overview = "Overview"
-            static let session = "Session"
-            static let progress = "Progress"
-            static let settings = "Settings"
+            static func title(for tabIndex: TabIndex) -> String {
+                switch tabIndex {
+                case .overview:
+                    return "Overview"
+                case .session:
+                    return "Session"
+                case .progress:
+                    return "Progress"
+                case .settings:
+                    return "Settings"
+                }
+            }
         }
         
         enum NavBar {
@@ -61,10 +69,18 @@ enum Resources {
     // MARK: - Images
     enum Images {
         enum TabBar {
-            static let overview = UIImage(named: "overview_tab")
-            static let session = UIImage(named: "session_tab")
-            static let progress = UIImage(named: "progress_tab")
-            static let settings = UIImage(named: "settings_tab")
+            static func image(for tabIndex: TabIndex) -> UIImage {
+                switch tabIndex {
+                case .overview:
+                    return UIImage(named: "overview_tab") ?? UIImage()
+                case .session:
+                    return UIImage(named: "session_tab") ?? UIImage()
+                case .progress:
+                    return UIImage(named: "progress_tab") ?? UIImage()
+                case .settings:
+                    return UIImage(named: "settings_tab") ?? UIImage()
+                }
+            }
         }
         
         enum Common {

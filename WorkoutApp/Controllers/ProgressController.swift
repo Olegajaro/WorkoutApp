@@ -13,7 +13,7 @@ class ProgressController: BaseController {
         super.viewDidLoad()
         
         title = Resources.Strings.NavBar.progress
-        navigationController?.tabBarItem.title = Resources.Strings.TabBar.progress
+        navigationController?.tabBarItem.title = Resources.Strings.TabBar.title(for: .progress)
         
         addNavBarButton(atPosition: .left, withTitle: Resources.Strings.Progress.navBarLeft)
         addNavBarButton(atPosition: .right, withTitle: Resources.Strings.Progress.navBarRight)
