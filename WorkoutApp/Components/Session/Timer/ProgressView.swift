@@ -23,6 +23,13 @@ extension TimerView {
                                           endAngle: endAngle,
                                           clockwise: true)
             
+            let backgroundCircleLayer = CAShapeLayer()
+            backgroundCircleLayer.path = circlePath.cgPath
+            backgroundCircleLayer.strokeColor = Resources.Colors.separator.cgColor
+            backgroundCircleLayer.lineWidth = 20
+            backgroundCircleLayer.fillColor = UIColor.clear.cgColor
+            backgroundCircleLayer.lineCap = .round
+            
             let circleLayer = CAShapeLayer()
             circleLayer.path = circlePath.cgPath
             circleLayer.strokeColor = Resources.Colors.active.cgColor
@@ -31,7 +38,32 @@ extension TimerView {
             circleLayer.fillColor = UIColor.clear.cgColor
             circleLayer.lineCap = .round
             
+            let dotAngle = CGFloat.pi * (7 / 6 - (8 / 6 * percent))
+            let dotPoint = CGPoint(x: cos(-dotAngle) * radius + center.x,
+                                        y: sin(-dotAngle) * radius + center.y)
+            
+            let dotPath = UIBezierPath()
+            dotPath.move(to: dotPoint)
+            dotPath.addLine(to: dotPoint)
+            
+            let bigDotLayer = CAShapeLayer()
+            bigDotLayer.path = dotPath.cgPath
+            bigDotLayer.fillColor = UIColor.clear.cgColor
+            bigDotLayer.strokeColor = Resources.Colors.active.cgColor
+            bigDotLayer.lineCap = .round
+            bigDotLayer.lineWidth = 20
+            
+            let dotLayer = CAShapeLayer()
+            dotLayer.path = dotPath.cgPath
+            dotLayer.fillColor = UIColor.clear.cgColor
+            dotLayer.strokeColor = UIColor.white.cgColor
+            dotLayer.lineCap = .round
+            dotLayer.lineWidth = 8
+            
+            layer.addSublayer(backgroundCircleLayer)
             layer.addSublayer(circleLayer)
+            layer.addSublayer(bigDotLayer)
+            layer.addSublayer(dotLayer)
         }
         
     }
