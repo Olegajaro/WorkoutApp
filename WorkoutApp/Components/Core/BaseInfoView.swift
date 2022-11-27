@@ -16,11 +16,7 @@ class BaseInfoView: BaseView {
         return label
     }()
     
-    private let button: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .systemRed
-        return button
-    }()
+    private let button = CustomButton(withType: .primary)
     
     private let contentView: UIView = {
         let view = UIView()
@@ -35,7 +31,7 @@ class BaseInfoView: BaseView {
         titleLabel.text = title?.uppercased()
         titleLabel.textAlignment = buttonTitle == nil ? .center : .left
         
-        button.setTitle(buttonTitle, for: .normal)
+        button.setTitle(buttonTitle ?? "")
         button.isHidden = buttonTitle == nil ? true : false
         
         super.init(frame: .zero)
@@ -77,7 +73,6 @@ extension BaseInfoView {
         NSLayoutConstraint.activate([
             button.trailingAnchor.constraint(equalTo: trailingAnchor),
             button.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            button.widthAnchor.constraint(equalToConstant: 130),
             button.heightAnchor.constraint(equalToConstant: 30)
         ])
         
