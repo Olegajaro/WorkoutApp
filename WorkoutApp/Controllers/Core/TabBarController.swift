@@ -20,6 +20,11 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         
         configure()
+        swithTo(tabIndex: .session)
+    }
+    
+    func swithTo(tabIndex: TabIndex) {
+        selectedIndex = tabIndex.rawValue
     }
     
     private func configure() {

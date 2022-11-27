@@ -9,9 +9,26 @@ import UIKit
 
 final class OverviewNavBar: BaseView {
     
-    private let titleLabel = UILabel()
-    private let customButton = CustomButton()
-    private let addButton = UIButton()
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = Resources.Strings.NavBar.overview
+        label.textColor = Resources.Colors.appTextGrayColor
+        label.font = Resources.Fonts.helveticaRegular(withSize: 22)
+        return label
+    }()
+    
+    private let customButton: CustomButton = {
+        let button = CustomButton(withType: .secondary)
+        button.setTitle(Resources.Strings.Overview.customButtonTitle)
+        return button
+    }()
+    
+    private let addButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(Resources.Images.Common.add, for: .normal)
+        return button
+    }()
     
     private let weakView = WeekView()
     
@@ -54,8 +71,7 @@ extension OverviewNavBar {
         NSLayoutConstraint.activate([
             customButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             customButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -16),
-            customButton.heightAnchor.constraint(equalToConstant: 28),
-            customButton.widthAnchor.constraint(equalToConstant: 130)
+            customButton.heightAnchor.constraint(equalToConstant: 28)
         ])
         
         NSLayoutConstraint.activate([
@@ -77,15 +93,6 @@ extension OverviewNavBar {
         super.configureViews()
         
         backgroundColor = .white
-        
-        titleLabel.text = Resources.Strings.NavBar.overview
-        titleLabel.textColor = Resources.Colors.appTextGrayColor
-        titleLabel.font = Resources.Fonts.helveticaRegular(withSize: 22)
-        
-        customButton.setTitle(Resources.Strings.Overview.customButtonTitle)
-        
-        addButton.translatesAutoresizingMaskIntoConstraints = false
-        addButton.setImage(Resources.Images.Common.add, for: .normal)
     }
     
 }

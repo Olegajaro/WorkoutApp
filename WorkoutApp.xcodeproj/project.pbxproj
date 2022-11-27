@@ -66,6 +66,7 @@
 			children = (
 				109103992928E08000B522CC /* BaseView.swift */,
 				10E26F0D292A3BD9008B8D0D /* BaseInfoView.swift */,
+				1096D603292103350084CD14 /* CustomButton.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -169,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				1091039C2928F37500B522CC /* WeekView */,
-				1096D603292103350084CD14 /* CustomButton.swift */,
 				109103962928E02D00B522CC /* OverviewNavBar.swift */,
 			);
 			path = Overview;
