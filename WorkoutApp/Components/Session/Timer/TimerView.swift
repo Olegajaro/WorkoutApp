@@ -11,7 +11,7 @@ final class TimerView: BaseInfoView {
     
     private let progressView: ProgressView = {
         let progressView = ProgressView()
-        progressView.drawProgress(with: 0)
+        progressView.drawProgress(with: 0.75)
         return progressView
     }()
     
@@ -38,6 +38,5 @@ extension TimerView {
     override func configureViews() {
         super.configureViews()
         
-        progressView.backgroundColor = .red
     }
 }

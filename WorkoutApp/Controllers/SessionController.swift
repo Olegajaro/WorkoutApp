@@ -31,7 +31,7 @@ extension SessionController {
             timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            timerView.heightAnchor.constraint(equalToConstant: 300)
+            timerView.heightAnchor.constraint(equalToConstant: 500)
         ])
     }
     
