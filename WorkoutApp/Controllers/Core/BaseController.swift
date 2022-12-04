@@ -48,7 +48,6 @@ class BaseController: UIViewController {
 }
 
 extension BaseController {
-    
     func addNavBarButton(atPosition position: NavBarItemPosition, withTitle title: String) {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
@@ -70,5 +69,13 @@ extension BaseController {
         }
     }
     
+    func setTitleForNavBarButton(_ title: String, atPosition position: NavBarItemPosition) {
+        switch position {
+        case .left:
+            (navigationItem.leftBarButtonItem?.customView as? UIButton)?.setTitle(title, for: .normal)
+        case .right:
+            (navigationItem.rightBarButtonItem?.customView as? UIButton)?.setTitle(title, for: .normal)
+        }
+    }
 }
 
